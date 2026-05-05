@@ -1,0 +1,107 @@
+/*personal goal: practice native html & css without using flexbox/grid */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--gray-100);
+}
+
+p,
+h4 {
+  margin: 14px;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  background-image:
+    url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    -20vw -60vh,
+    70vw 50vh;
+  background-size: contain contain;
+}
+
+.card {
+  background-color: var(--gray-100);
+  width: 80%;
+  max-width: 350px;
+  border-radius: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-image: url("./images/bg-pattern-card.svg");
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  color: var(--gray-blue);
+  box-shadow: 1px 1px 15px black;
+}
+
+.card-header {
+  margin-top: 30%;
+  width: 100%;
+}
+
+.profile-img {
+  display: inline-block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid var(--gray-100);
+  background-image: url("./images/image-victor.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stats {
+  width: 100%;
+  display: table;
+  font-size: 14px;
+}
+
+.stats-item {
+  display: table-cell;
+  width: 33%;
+}
+
+.stats-item p {
+  margin-top: 8px;
+  color: var(--gray-blue);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.stats-item h4 {
+  margin-bottom: 0px;
+  color: var(--navy-blue);
+}
+
+.bold-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--navy-blue);
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 85%;
+  }
+}
+
+:root {
+  --primary-color: hsl(185, 75%, 39%);
+  --navy-blue: hsl(229, 23%, 23%);
+  --gray-blue: hsl(227, 10%, 46%);
+  --gray-100: hsl(225, 10%, 92%);
+}
